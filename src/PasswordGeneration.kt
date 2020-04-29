@@ -9,7 +9,7 @@ class PasswordGeneration {
     private val DIGITS = arrayOf('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
     private val L_CASE = arrayOf('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
     private val U_CASE = arrayOf('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'p', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z')
-    private val SYMBOLS = arrayOf('@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<')
+    private val SYMBOLS = arrayOf('@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '*', '(', ')')
     private val secureRandom = SecureRandom()
     private var passwordLength:Int = 0
     private var digitCounter = 0
@@ -34,7 +34,6 @@ class PasswordGeneration {
 
         for(i in 0..digitCounter){
             randomdigits.append(DIGITS.random().toString())
-
         }
         for(i in 0..lCaseCounter){
             randomLCases.append(L_CASE.random().toString())
